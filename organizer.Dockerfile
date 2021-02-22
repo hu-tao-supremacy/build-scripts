@@ -1,7 +1,6 @@
 FROM maven:latest as build-env
 WORKDIR /app/organizer
 ADD ./apps/organizer /app/organizer
-ADD ./apis /apis
 RUN mvn clean compile package
 
 FROM gcr.io/distroless/java
