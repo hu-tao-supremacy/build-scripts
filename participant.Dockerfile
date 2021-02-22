@@ -1,4 +1,4 @@
-FROM python:3-slim AS build-env
+FROM python:3 AS build-env
 WORKDIR /app/participant
 ADD . /app/participant
 RUN pip3 install grpcio==1.0.0
