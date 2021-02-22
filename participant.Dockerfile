@@ -1,7 +1,6 @@
 FROM python:3 AS build-env
 WORKDIR /app/participant
 ADD . /app/participant
-RUN pip3 install grpcio==1.0.0
 RUN pip3 install -r ./requirements.txt
 
 FROM gcr.io/distroless/python3
