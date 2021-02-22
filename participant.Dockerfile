@@ -1,8 +1,7 @@
 FROM python:3-slim AS build-env
 WORKDIR /app/participant
 ADD . /app/participant
-RUN pip3 install --upgrade pip
-RUN pip install -r ./requirements.txt
+RUN pip3 install -r ./requirements.txt
 
 FROM gcr.io/distroless/python3
 COPY --from=build-env /app/participant /app
