@@ -1,4 +1,4 @@
-FROM node:latest as build-env
+FROM node:14-alpine as build-env
 WORKDIR /app/account
 ADD . /app/account
 RUN yarn install
