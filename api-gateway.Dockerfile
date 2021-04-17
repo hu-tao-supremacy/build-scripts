@@ -1,4 +1,4 @@
-FROM node:14 as build-env
+FROM node:14-alpine as build-env
 WORKDIR /app/api-gateway
 ADD . /app/api-gateway
 RUN yarn install
